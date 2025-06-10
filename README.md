@@ -12,7 +12,7 @@ Maybe you just don't enjoy fun. I'm not here to judge.
 
 ## How does this work?
 
-This relies on you logging into NYT via your browser at least once. It then uses the cookie from that session to go look up solutions for:
+This relies on you logging into NYT via Chrome at least once. It then uses the cookie from that session to go look up solutions for:
 
 - The daily mini
 - Wordle
