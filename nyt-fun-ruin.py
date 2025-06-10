@@ -141,6 +141,15 @@ def get_spelling_bee_solution(date_str, cookie, wait):
 
     return '\n'.join(sorted(unique_words))
 
+def get_strands_solution(date_str, cookie, wait):
+    """Fetch the Strands solution from the NYT API"""
+    url = f"https://www.nytimes.com/svc/strands/v2/{date_str}.json"
+    resp = wait_for_url(url, cookie, wait)
+    puzzle = resp.json()
+    solution = 'Theme words: ' + ' '.join(puzzle['themeWords']) + '\n'
+    solution += 'Spangram: ' + puzzle['spangram'] + '\n'
+    return solution
+
 if __name__ == "__main__":
 
     parser = argparse.ArgumentParser()
@@ -153,7 +162,7 @@ if __name__ == "__main__":
     parser.add_argument(
         '--games', '-g',
         default="all",
-        help="Games to ruin (default: all). Options: mini, wordle, connections, spelling-bee, all"
+        help="Games to ruin (default: all). Options: mini, wordle, connections, spelling-bee, strands, all"
     )
     parser.add_argument(
         '--recipient', '-r',
@@ -190,6 +199,10 @@ if __name__ == "__main__":
         payload += "---------------------------\n"
         payload += f"Spelling bee words for {args.date}:\n"
         payload += get_spelling_bee_solution(args.date, cookie, args.wait)
+    if args.games == "all" or "strands" in args.games:
+        payload += "---------------------------\n"
+        payload += f"Strands for {args.date}:\n"
+        payload += get_strands_solution(args.date, cookie, args.wait)
 
     print(payload)
 

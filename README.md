@@ -18,6 +18,7 @@ This relies on you logging into NYT via Chrome at least once. It then uses the c
 - Wordle
 - Connections
 - Spelling bee
+- Strands
 
 Optionally, it can also send these results via iMessage (OSX required for this)
 
