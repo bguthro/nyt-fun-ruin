@@ -13,3 +13,11 @@ python-virtualenv: .python-version
 
 run:
 	./nyt-fun-ruin.py
+
+check:
+	ruff check
+
+fix:
+	ruff check --fix
+
+.PHONY: python-virtualenv run check fix

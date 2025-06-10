@@ -1,8 +1,6 @@
 #!/usr/bin/env python3
 import requests
-from http import cookiejar
 import browser_cookie3
-import json
 from datetime import date, datetime
 import argparse
 import subprocess
@@ -71,7 +69,7 @@ def get_mini_solution(date_str, cookie, wait):
     resp = wait_for_url(url, cookie, wait)
     puzzle = resp.json()
 
-    height = puzzle["body"][0]["dimensions"]["height"]
+    #height = puzzle["body"][0]["dimensions"]["height"]
     width = puzzle["body"][0]["dimensions"]["width"]
     cells = puzzle["body"][0]["cells"]
 
