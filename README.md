@@ -41,7 +41,7 @@ options:
   -h, --help            show this help message and exit
   --date DATE, -d DATE  Date in YYYY-MM-DD format (default: today)
   --games GAMES, -g GAMES
-                        Games to ruin (default: all). Options: mini, wordle, connections, spelling-bee, all
+                        Games to ruin (default: all). Options: mini, wordle, connections, spelling-bee, strands, all
   --recipient RECIPIENT, -r RECIPIENT
                         iMessage recipient
   --wait, -w            Wait for the game to be available (default: False)
@@ -57,6 +57,7 @@ I only provide the example results for the first use case
 ```
 % ./nyt-fun-ruin.py
 Ruining fun...please wait.
+
 ---------------------------
 Mini solution for 2024-05-26:
 🅂 🄰 🄶 🄴 □
@@ -123,6 +124,12 @@ LAICAL
 LICE
 LICK
 LILAC
+
+---------------------------
+Strands for 2024-05-26:
+Theme words: BROOKS CASH HILL PAISLEY SWIFT TWAIN URBAN
+Spangram: COUNTRYSTARS
+
 ```
 
 ## Just get the daily mini results
@@ -132,7 +139,7 @@ LILAC
 
 ## Get all games, except for the spelling bee
 ```
-% ./nyt-fun-ruin.py --games mini,wordle,connections
+% ./nyt-fun-ruin.py --games mini,wordle,connections,strands
 ```
 
 ## Get all games for a different date

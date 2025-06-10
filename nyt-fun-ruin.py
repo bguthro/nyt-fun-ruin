@@ -182,7 +182,7 @@ if __name__ == "__main__":
     cookie = get_nyt_s_cookie()
 
     payload = ""
-    print("Ruining fun...please wait.")
+    print("Ruining fun...please wait.\n")
     if args.games == "all" or "mini" in args.games:
         payload += "---------------------------\n"
         payload += f"Mini solution for {args.date}:\n"
@@ -198,7 +198,7 @@ if __name__ == "__main__":
     if args.games == "all" or "spelling-bee" in args.games:
         payload += "---------------------------\n"
         payload += f"Spelling bee words for {args.date}:\n"
-        payload += get_spelling_bee_solution(args.date, cookie, args.wait)
+        payload += get_spelling_bee_solution(args.date, cookie, args.wait) + "\n\n"
     if args.games == "all" or "strands" in args.games:
         payload += "---------------------------\n"
         payload += f"Strands for {args.date}:\n"
