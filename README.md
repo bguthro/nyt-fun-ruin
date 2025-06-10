@@ -58,11 +58,11 @@ I only provide the example results for the first use case
 Ruining fun...please wait.
 ---------------------------
 Mini solution for 2024-05-26:
-SAGE.
-PLANT
-ELUDE
-WIZEN
-SEEDS
+🅂 🄰 🄶 🄴 □
+🄿 🄻 🄰 🄽 🅃
+🄴 🄻 🅄 🄳 🄴
+🅆 🄸 🅉 🄴 🄽
+🅂 🄴 🄴 🄳 🅂
 
 ---------------------------
 Wordle solution for 2024-05-26:

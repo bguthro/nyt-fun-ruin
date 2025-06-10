@@ -77,9 +77,10 @@ def get_mini_solution(date_str, cookie, wait):
     solution=''
     for cell in cells:
         if 'answer' in cell:
-            solution += cell["answer"]
+            #solution += cell["answer"]
+            solution += chr(0x1F130 + ord(cell["answer"]) - ord('A')) + ' '
         else:
-            solution += '.'
+            solution += chr(0x25a1) + ' '
 
         w += 1
         if w >= width:
