@@ -175,19 +175,19 @@ if __name__ == "__main__":
 
     payload = ""
     print("Ruining fun...please wait.")
-    if args.games == "all" or args.games == "mini":
+    if args.games == "all" or "mini" in args.games:
         payload += "---------------------------\n"
         payload += f"Mini solution for {args.date}:\n"
         payload += get_mini_solution(args.date, cookie, args.wait) + "\n"
-    if args.games == "all" or args.games == "wordle":
+    if args.games == "all" or "wordle" in args.games:
         payload += "---------------------------\n"
         payload += f"Wordle solution for {args.date}:\n"
         payload += get_wordle_solution(args.date, cookie, args.wait) + "\n\n"
-    if args.games == "all" or args.games == "connections":
+    if args.games == "all" or "connections" in args.games:
         payload += "---------------------------\n"
         payload += f"Connections solution for {args.date}:\n"
         payload += get_connections_solution(args.date, cookie, args.wait) + "\n"
-    if args.games == "all" or args.games == "spelling-bee":
+    if args.games == "all" or "spelling-bee" in args.games:
         payload += "---------------------------\n"
         payload += f"Spelling bee words for {args.date}:\n"
         payload += get_spelling_bee_solution(args.date, cookie, args.wait)
